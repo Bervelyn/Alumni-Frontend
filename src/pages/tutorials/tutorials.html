@@ -1,0 +1,47 @@
+
+<ion-content>
+    <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+        <ion-slide justify-content-center>
+            <div class="diag">
+              <img src="assets/imgs/chat.png" class="slide-image"/>
+            </div>
+            
+            <div [@bounce]='state'>
+              <h2>Chat with other alumni.</h2>
+              <p>You can chat with other alumni from the past years to strengthen the bond</p>
+            </div>
+          </ion-slide>
+          <ion-slide>
+              <div class="diag">
+                <img src="assets/imgs/volunteer.png" class="slide-image"/>
+              </div>
+              
+              <div [@bounce]='state'>
+                <h2>Sign-up as a volunteer</h2>
+                <p>Join the community of modern thinking students as a Volunteer</p>
+              </div>
+            </ion-slide>
+        <ion-slide>
+            <div class="diag">
+              <img src="assets/imgs/calendar.png" class="slide-image"/>
+            </div>
+            
+            <div [@bounce]='state'>
+              <h2>Events</h2>
+              <p>Be informed about events.</p>
+            </div>
+          </ion-slide>
+      <ion-slide>
+        <div class="diag">
+          <img src="assets/imgs/megaphone.png" class="slide-image"/>
+        </div>
+        
+        <div [@bounce]='state'>
+          <h2>Notice Board</h2>
+          <p>Be notified about events happening in the school</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+    <button (click)="skip()" id="skip">{{ skipMsg }}</button>
+  </ion-content>
+  
